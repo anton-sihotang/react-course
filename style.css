@@ -8,11 +8,11 @@
 }
 
 .main-red-color {
-  color: var(--main-red-clor);
+  color: var(--main-red-color);
 }
 
 .main-black-color {
-  color: var(.main-black-color);
+  color: var(--main-black-color);
 }
 
 html {
@@ -47,7 +47,7 @@ html {
 }
 
 .frame {
-  border: 1px solid var(.main-black-color);
+  border: 1px solid var(--main-black-color);
   height: 100%;
 
   display: flex;
@@ -62,18 +62,17 @@ html {
 
 .header-title {
   flex: 1;
-  align-items: flex-start;
+  text-align: center;
 
   color: var(--main-black-color);
   font-size: 3.6rem;
-  text-align: center;
   font-family: "Homemade Apple", sans-serif;
   text-transform: lowercase;
 }
 
 .header-btn {
   font-size: 1.8rem;
-  font-family: "bungee", sans-serif;
+  font-family: "Bungee", sans-serif;
 
   padding: 16px;
   cursor: pointer;
@@ -84,7 +83,7 @@ html {
 }
 
 .header-btn.main-red-color:active {
-  text-shadow: 1px 1px 2px var(--main-red-clor);
+  text-shadow: 1px 1px 2px var(--main-red-color);
 }
 
 .header-btn.main-black-color:active {
@@ -107,7 +106,7 @@ html {
 
   flex: 1;
 
-  border-bottom: 1px solid var(--main-red-clor);
+  border-bottom: 1px solid var(--main-red-color);
   outline: unset;
 
   font-family: "Homemade Apple", sans-serif;
@@ -117,7 +116,7 @@ html {
 
 .add-btn {
   font-size: 1.8rem;
-  font-family: "bungee", sans-serif;
+  font-family: "Bungee", sans-serif;
 
   padding: 16px;
   padding-right: unset;
@@ -126,4 +125,33 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.add-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
